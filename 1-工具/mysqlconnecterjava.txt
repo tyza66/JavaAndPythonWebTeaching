@@ -1,0 +1,20 @@
+https://dev.mysql.com/downloads/connector/j/
+
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.27</version>
+</dependency>
+
+https://blog.csdn.net/baidu_39378193/article/details/123681011
+
+String url = "jdbc:mysql:///db2"; // 连接数据库服务器，并指定连接的数据库
+String username = "root"; // 登录名称
+String password = "1234"; // 登录密码
+Connection conn = DriverManager.getConnection(url,username,password);
+String sql = "update account set money = 5000 where id = 1";
+Statement stmt = conn.createStatement();
+int count = stmt.executeUpdate(sql);// 返回受影响的行数
+System.out.println("受影响的行数："+count);
+stmt.close();
+conn.close();
