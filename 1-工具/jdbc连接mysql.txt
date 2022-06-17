@@ -1,0 +1,115 @@
+https://blog.csdn.net/weixin_51008360/article/details/115379995
+
+//步骤1：加载驱动(mysql)
+	Class.forName("com.mysql.jdbc.Driver");
+//SQL Server 连接：com.microsoft.sqlserver.jdbc.SQLServerDriver
+//Oracle 连接：oracle.jdbc.driver.OracleDriver
+
+//步骤2：得到连接
+	 Connection conn =DriverManager.getConnection("连接字符串", "用户名","密码");
+	//连接字符串：	
+	/*	jdbc:mysql://localhost:3306/数据库名?characterEncoding=UTF-8
+	解释：
+		jdbc:mysql：使用jdbc连接mysql数据库
+		localhost: 表示本机
+		3306：表示端品号
+		characterEncoding=UTF-8：表示解决mysql乱码的问题
+*/
+//步骤3：得到执行sql语句的对象(Statement有sql漏洞的问题)
+	PreparedStatement pstmt =  conn.prepareStatement("sql语句");		//参数的地方用?号表示
+	//设置参数
+	pstmt.setxxxx(序号,值);						//xxx是具体的数据类型，如设置字符串参数用setString()
+
+//步骤4：执行查询
+	ResultSet rs = pstmt.executeQuery();
+	//取多行数据
+	while(rs.next()){	//移动到下一条数据
+	      //取具体列的数据
+	      rs.getxxxx("字段名"或下标);						//xxx是具体的数据类型，如取字符串用getString()
+	}
+
+	//取一条数据或判断是否有数据
+	if(rs.next()){
+		//有查询到数据......取rs.getxxxx()
+	}else{
+		//没有查询到数据....
+	}
+
+//步骤5：关闭
+	rs.close();
+	pstmt.close();
+	conn.close();
+
+
+//步骤1：加载驱动
+	Class.forName("com.mysql.jdbc.Driver");
+//步骤2：得到连接
+	Connection conn =DriverManager.getConnection("连接字符串", "用户名","密码");
+//步骤3：得到执行sql语句的对象
+	PreparedStatement pstmt =  conn.prepareStatement("sql语句");		
+	//设置参数
+	pstmt.setxxxx(序号,值);						
+
+//步骤4：执行 insert update delete
+	int 变量名 = pstmt.executeUpdate();					//返回受影响的行数(int)
+
+//步骤5：关闭
+	pstmt.close();
+	conn.close();
+
+if(row>=1){
+	//成功....
+}else{
+	//失败.........
+}
+
+import java.sql.*;
+
+/**
+ * mysql帮助类
+ */
+public class ConnDB {
+    /**
+     * 打开连接
+     * @return
+     */
+    public static Connection getConn(){
+        Connection conn = null;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/BookDB?characterEncoding=UTF-8","root","123456");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return conn;
+    }
+
+    /**
+     * 关闭连接
+     */
+    public static void closeDB(ResultSet rs, PreparedStatement pstmt,Connection conn){
+        try {
+            if(rs != null){
+                rs.close();
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        try {
+            if(pstmt != null){
+                pstmt.close();
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        try {
+            if(conn != null){
+                conn.close();
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+}
