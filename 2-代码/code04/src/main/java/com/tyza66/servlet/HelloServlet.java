@@ -11,11 +11,11 @@ import java.io.PrintWriter;
 @WebServlet("/HelloServlet")
 public class HelloServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         out.print("Hello,World!123");
+        out.close();
     }
 }
