@@ -235,8 +235,8 @@
       <item itemvalue="JUnit.TextDemo.text" />
       <item itemvalue="JUnit.TextDemo.text456" />
       <item itemvalue="JUnit.TextDemo.text123" />
-      <item itemvalue="Tomcat Server.TomcatServer" />
       <item itemvalue="JUnit.TextDemo.textMySql" />
+      <item itemvalue="Tomcat Server.TomcatServer" />
     </list>
     <recent_temporary>
       <list>
@@ -274,6 +274,7 @@
       <workItem from="1655472976279" duration="1335000" />
       <workItem from="1655625627219" duration="2789000" />
       <workItem from="1655690648375" duration="3318000" />
+      <workItem from="1659141989163" duration="197000" />
     </task>
     <servers />
   </component>
@@ -297,10 +298,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="294" y="100" key="#项目结构/0.0.1536.864@0.0.1536.864" timestamp="1655467372566" />
-    <state x="482" y="197" key="FileChooserDialogImpl" timestamp="1655459873091">
+    <state x="482" y="197" key="FileChooserDialogImpl" timestamp="1659142161836">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="482" y="197" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1655459873091" />
+    <state x="482" y="197" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1659142161836" />
     <state width="1294" height="244" key="GridCell.Tab.0.bottom" timestamp="1655692795191">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -373,18 +374,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="202" y="14" width="1238" height="850" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1655461065967" />
-    <state x="487" y="248" key="com.intellij.ide.util.TipDialog" timestamp="1655690647710">
+    <state x="487" y="248" key="com.intellij.ide.util.TipDialog" timestamp="1659142034288">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="487" y="248" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1655690647710" />
+    <state x="487" y="248" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1659142034288" />
     <state x="331" y="79" key="com.intellij.javaee.view.ServerArtifactsDialog" timestamp="1655460498646">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="331" y="79" key="com.intellij.javaee.view.ServerArtifactsDialog/0.0.1536.864@0.0.1536.864" timestamp="1655460498646" />
-    <state x="52" y="151" key="new project wizard" timestamp="1655430426282">
+    <state x="131" y="174" key="new project wizard" timestamp="1659142184802">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="52" y="151" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1655430426282" />
+    <state x="131" y="174" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1659142184802" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1655690650821">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
